@@ -1,5 +1,117 @@
 .root {
   width: 100vw;
   height: 100vh;
-  background: red;
+  //   background: blue;
+
+  .wrap-table {
+    .c-table {
+      padding-left: 20px;
+      padding-right: 20px;
+      .c-table-header {
+        background-color: #f3f3f3;
+        display: flex;
+        height: 50px;
+
+        .cells {
+          display: flex;
+          align-items: center;
+          &:first-child {
+            flex: 3;
+          }
+
+          &:nth-child(2) {
+            flex: 1.5;
+          }
+
+          &:nth-child(3) {
+            flex: 1.5;
+          }
+
+          &:last-child {
+            width: 200px;
+          }
+        }
+      }
+
+      .c-table-body {
+        .rows {
+          display: flex;
+          height: 40px;
+          border: 1px solid #f3f3f3;
+
+          .cells {
+            display: flex;
+            align-items: center;
+            &:first-child {
+              flex: 3;
+            }
+
+            &:nth-child(2) {
+              flex: 1.5;
+            }
+
+            &:nth-child(3) {
+              flex: 1.5;
+
+              img {
+                height: 20px;
+                width: 20px;
+                border-radius: 20px;
+              }
+
+              span {
+                margin-left: 10px;
+              }
+            }
+
+            &:last-child {
+              width: 200px;
+            }
+          }
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .root {
+    .wrap-table {
+      .c-table {
+        .c-table-header {
+          display: none;
+        }
+
+        .c-table-body {
+          display: block;
+          .rows {
+            display: block;
+            height: auto;
+
+            .cells {
+              height: 40px;
+              &::before {
+                content: attr(data-cell) ": ";
+                font-weight: 400;
+                font-size: 14px;
+                width: 40%;
+                display: inline-block;
+                color: #a3a6b4;
+                padding-left: 0;
+                text-align: left;
+              }
+
+              &:last-child {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
