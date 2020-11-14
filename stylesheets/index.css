@@ -1,7 +1,92 @@
 .root {
   width: 100vw;
   height: 100vh;
-  background: red;
+}
+.root .wrap-table .c-table {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.root .wrap-table .c-table .c-table-header {
+  background-color: #f3f3f3;
+  display: flex;
+  height: 50px;
+}
+.root .wrap-table .c-table .c-table-header .cells {
+  display: flex;
+  align-items: center;
+}
+.root .wrap-table .c-table .c-table-header .cells:first-child {
+  flex: 3;
+}
+.root .wrap-table .c-table .c-table-header .cells:nth-child(2) {
+  flex: 1.5;
+}
+.root .wrap-table .c-table .c-table-header .cells:nth-child(3) {
+  flex: 1.5;
+}
+.root .wrap-table .c-table .c-table-header .cells:last-child {
+  width: 200px;
+}
+.root .wrap-table .c-table .c-table-body .rows {
+  display: flex;
+  height: 40px;
+  border: 1px solid #f3f3f3;
+}
+.root .wrap-table .c-table .c-table-body .rows .cells {
+  display: flex;
+  align-items: center;
+}
+.root .wrap-table .c-table .c-table-body .rows .cells:first-child {
+  flex: 3;
+}
+.root .wrap-table .c-table .c-table-body .rows .cells:nth-child(2) {
+  flex: 1.5;
+}
+.root .wrap-table .c-table .c-table-body .rows .cells:nth-child(3) {
+  flex: 1.5;
+}
+.root .wrap-table .c-table .c-table-body .rows .cells:nth-child(3) img {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+}
+.root .wrap-table .c-table .c-table-body .rows .cells:nth-child(3) span {
+  margin-left: 10px;
+}
+.root .wrap-table .c-table .c-table-body .rows .cells:last-child {
+  width: 200px;
+}
+.root .wrap-table .c-table .c-table-body .rows:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 575.98px) {
+  .root .wrap-table .c-table .c-table-header {
+    display: none;
+  }
+  .root .wrap-table .c-table .c-table-body {
+    display: block;
+  }
+  .root .wrap-table .c-table .c-table-body .rows {
+    display: block;
+    height: auto;
+  }
+  .root .wrap-table .c-table .c-table-body .rows .cells {
+    height: 40px;
+  }
+  .root .wrap-table .c-table .c-table-body .rows .cells::before {
+    content: attr(data-cell) ": ";
+    font-weight: 400;
+    font-size: 14px;
+    width: 40%;
+    display: inline-block;
+    color: #a3a6b4;
+    padding-left: 0;
+    text-align: left;
+  }
+  .root .wrap-table .c-table .c-table-body .rows .cells:last-child {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
