@@ -20,3 +20,4 @@ sau đó chạy lệnh: <i>sass --watch style:stylesheets</i>
 <hr />
 
 Cách chạy code thì vào thư mục chứa code, rồi click phải file .html -> chọn open with, chọn trình duyệt để mở
+# html_css
